@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.calculator {
+  width: 500px;
+  height: 500px;
+  margin: 5rem auto;
+}
+
+.result {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 32px;
+  padding: 1rem 0.3rem;
+  background-color: #858693;
+  color: #fff;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.1rem;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+.btn {
+  padding: 1rem;
+  border: none;
+}
+
+.number {
+  background-color: #e0e0e0;
+}
+
+.operations {
+  background-color: #f5913e;
+}
