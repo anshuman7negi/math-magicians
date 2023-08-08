@@ -7,19 +7,24 @@ const Quotes = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('https://api.api-ninjas.com/v1/quotes?category=computers', {
-        headers: {
-          'X-Api-Key': '0oWa33wHCcpfBcURu9UPv39A2rSCT1DcyejUtSf8',
-          'Content-Type': 'application/json',
-        },
-      });
+      try {
+        const response = await fetch('https://api.api-ninjas.com/v1/quotes?category=computers', {
+          headers: {
+            'X-Api-Key': '0oWa33wHCcpfBcURu9UPv39A2rSCT1DcyejUtSf8',
+            'Content-Type': 'application/json',
+          },
+        });
 
-      if (response.ok) {
-        const data = await response.json();
-        const randomIndex = Math.floor(Math.random() * data.length);
-        setQuote(data[randomIndex]?.quote);
-        setIsLoading(false);
-      } else {
+        if (response.ok) {
+          const data = await response.json();
+          const randomIndex = Math.floor(Math.random() * data.length);
+          setIsLoading(false);
+          setQuote(data[randomIndex]?.quote);
+        } else {
+          setError('Error fetching quotes');
+          setIsLoading(false);
+        }
+      } catch {
         setError('Error fetching quotes');
         setIsLoading(false);
       }
