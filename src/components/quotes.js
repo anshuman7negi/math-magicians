@@ -2,29 +2,42 @@
 import React, { useState, useEffect } from "react";
 
 const Quotes = () => {
-  const [quote, setQuote] = useState("");
+    const [quote, setQuote] = useState("");
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch('https://api.api-ninjas.com/v1/quotes?category=happiness', {
-        headers: {
-          "X-Api-Key": "xvQ4zn3ncUXfFpUX9jMUXA==cPAUJYLm4LO8QnWH",
-          "Content-Type": "application/json",
-        },
-      });
-      const data = await response.json();
-      const randomIndex = Math.floor(Math.random() * data.length);
-      setQuote(data[randomIndex]?.quote || "");
-    };
+    useEffect(() => {
+        const fetchData = async () => {
 
-    fetchData();
-  }, []);
+            const response = await fetch('https://api.api-ninjas.com/v1/quotes?category=computers', {
+                headers: {
+                    "X-Api-Key": "0oWa33wHCcpfBcURu9UPv39A2rSCT1DcyejUtSf8",
+                    "Content-Type": "application/json",
+                },
+            });
 
-  return (
- 
-      <p className="randomQotes">{quote}</p>
+            if (response.ok) {
+                const data = await response.json();
+                const randomIndex = Math.floor(Math.random() * data.length);
+                setQuote(data[randomIndex]?.quote);
+                setIsLoading(false);
+            } else {
+                setError("Error fetching quotes");
+                setIsLoading(false);
+            }
 
-  );
+        };
+
+        fetchData();
+    }, []);
+
+    return (
+        <div className="quotes">
+            {isLoading && <p className="randomQuotes">Loading...</p>}
+            {!isLoading && error && <p className="randomQuotes">Error: {error}</p>}
+            {!isLoading && !error && <p className="randomQuotes">{quote}</p>}
+        </div>
+    );
 };
 
 export default Quotes;

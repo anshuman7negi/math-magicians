@@ -4,9 +4,7 @@
 }
 
 .calculator {
-  width: 500px;
-  height: 500px;
-  margin: 5rem auto;
+  width: 100%;
 }
 
 .result {
@@ -46,10 +44,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
-    align-items: center;
-    padding: 3rem 1rem;
+  align-items: center;
+  grid-column-gap: 2rem;
+  height: 70vh;
+  padding: 2rem;
 }
 
-.randomQotes {
+.randomQuotes {
   font-size: 32px;
+  text-align: center;
+  font-weight: 700;
 }
