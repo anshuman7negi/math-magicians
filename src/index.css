@@ -41,3 +41,15 @@
 .operations {
   background-color: #f5913e;
 }
+
+.app-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+}
+
+.randomQotes {
+  font-size: 32px;
+}
