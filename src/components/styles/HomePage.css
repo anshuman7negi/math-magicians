@@ -1,35 +1,34 @@
 .homePageContainer {
-     display: flex;
-     flex-direction: column;
-     padding: 4rem 2rem 0 3rem;
-     gap: 2rem;
-  }
-  
-  .welcome {
-    font-size: 2.5rem;
-  }
-  
-  .description {
-    font-size: 1.8rem;
-  }
-  
-  .listContainer {
-    margin: 25px 0 0 30px;
-  }
-  
-  .listItem {
-    list-style: square;
-    font-size: 1.6rem;
-  }
-  
-  .listItem::marker {
-    color: orange;
-  }
-  
-  .homeImage {
-    width: 38%;
-    position: absolute;
-    right: 5%;
-    bottom: 5%;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 2rem 0 3rem;
+  gap: 2rem;
+}
+
+.welcome {
+  font-size: 2.5rem;
+}
+
+.description {
+  font-size: 1.8rem;
+}
+
+.listContainer {
+  margin: 25px 0 0 30px;
+}
+
+.listItem {
+  list-style: square;
+  font-size: 1.6rem;
+}
+
+.listItem::marker {
+  color: orange;
+}
+
+.homeImage {
+  width: 38%;
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+}

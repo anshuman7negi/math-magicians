@@ -64,7 +64,7 @@
 }
 
 .calculator-container {
-  display:  grid;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   height: 70vh;
   padding-top: 6rem;
