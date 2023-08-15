@@ -19,7 +19,7 @@ export default function Calculator() {
       <h2 className="calculatorTitle">Let&apos;s do some math!</h2>
       <div className="calculator">
         <p className="result">
-          {data.total}
+          {data.total || 0}
           {' '}
           {data.operation}
           {' '}
