@@ -4,7 +4,7 @@ import calculate from '../logic/calculate';
 
 export default function Calculator() {
   const [data, setData] = useState({
-    total: null,
+    total: 0,
     next: null,
     operation: null,
   });
@@ -16,6 +16,7 @@ export default function Calculator() {
 
   return (
     <div className="calculator-container">
+      <h2 className="calculatorTitle">Let&apos;s do some math!</h2>
       <div className="calculator">
         <p className="result">
           {data.total}
@@ -24,7 +25,7 @@ export default function Calculator() {
           {' '}
           {data.next}
         </p>
-        <Button onClick={handleData} />
+        <Button handleData={handleData} />
       </div>
     </div>
   );

@@ -1,0 +1,39 @@
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 93%;
+    padding: 2rem;
+  }
+  
+   .title {
+    font-size: 2.5rem;
+  }
+  
+  .linksContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .linkItems {
+    list-style: none;
+    font-size: 1.5rem;
+  }
+  
+  .links {
+    text-decoration: none;
+    color: unset;
+    font-weight: 700;
+  }
+  
+  .links:hover {
+    color: orange;
+  }
+  
+  .separateDiv {
+    width: 2px;
+    height: 30px;
+    background-color: #000;
+  }
+  
