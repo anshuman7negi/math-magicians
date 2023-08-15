@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = ({ onClick }) => {
+const Button = ({ handleData }) => {
   const buttons = [
     'AC', '+/-', '%', '÷',
     '7', '8', '9', 'x',
@@ -10,10 +10,6 @@ const Button = ({ onClick }) => {
     '0', '.', '=',
   ];
 
-  const handleClick = (number) => {
-    onClick(number);
-  };
-
   return (
     <div className="buttons">
       {buttons.map((number) => (
@@ -21,7 +17,7 @@ const Button = ({ onClick }) => {
           key={number}
           type="button"
           className={`btn ${['÷', 'x', '-', '+', '='].includes(number) ? 'operations' : 'number'} ${number === '0' ? 'zero' : ''}`}
-          onClick={() => handleClick(number)}
+          onClick={() => handleData(number)}
         >
           {number}
         </button>
@@ -31,7 +27,7 @@ const Button = ({ onClick }) => {
 };
 
 Button.propTypes = {
-  onClick: PropTypes.func.isRequired,
+  handleData: PropTypes.func.isRequired,
 };
 
 export default Button;

@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+
 * {
   padding: 0;
   margin: 0;
 }
 
 .calculator {
-  width: 100%;
+  width: 90%;
 }
 
 .result {
@@ -41,17 +43,33 @@
 }
 
 .app-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.quotes {
+  display: flex;
   align-items: center;
-  grid-column-gap: 2rem;
+  justify-content: center;
   height: 70vh;
-  padding: 2rem;
 }
 
 .randomQuotes {
   font-size: 32px;
   text-align: center;
   font-weight: 700;
+  padding: 2rem;
+  max-width: 90%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.calculator-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 70vh;
+  padding-top: 6rem;
+}
+
+.calculator-container h2 {
+  text-align: center;
 }
