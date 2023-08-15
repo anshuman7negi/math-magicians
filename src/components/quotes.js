@@ -18,19 +18,16 @@ const Quotes = () => {
         if (response.ok) {
           const data = await response.json();
           const randomIndex = Math.floor(Math.random() * data.length);
-          setIsLoading(false);
           setQuote(data[randomIndex]?.quote);
         } else {
           setError('Error fetching quotes');
-          setIsLoading(false);
         }
       } catch {
         setError('Error fetching quotes');
-        setIsLoading(false);
       }
     };
 
-    fetchData();
+    fetchData().finally(() => setIsLoading(false));
   }, []);
 
   return (
