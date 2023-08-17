@@ -58,7 +58,7 @@ A Math Magician is a single page application where you can do simple math calcul
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Comming soon
+- [Live Demo](https://mathmagic-ux2q.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -119,7 +119,7 @@ To run tests on the cloned project, run the following commands:
 
 ### Deployment
 
-comming soon...
+[deployment link](https://mathmagic-ux2q.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
